@@ -2,6 +2,33 @@
 
 This project implements a simple database system for managing a collection of books, authors, and genres. The design allows for easy retrieval and management of book-related information.
 
+
+#### Table: Books
+
+| Column Name     | Data Type                      | Description                           |
+|------------------|-------------------------------|---------------------------------------|
+| `id`             | INT (Primary Key, Auto Increment) | Unique identifier for each book       |
+| `title`          | VARCHAR(255)                  | Title of the book                     |
+| `author_id`      | INT                           | Foreign key referencing `Authors`     |
+| `genre_id`       | INT                           | Foreign key referencing `Genres`      |
+| `published_year` | INT                           | Year the book was published           |
+
+#### Table: Authors
+
+| Column Name     | Data Type                      | Description                           |
+|------------------|-------------------------------|---------------------------------------|
+| `id`             | INT (Primary Key, Auto Increment) | Unique identifier for each author     |
+| `name`           | VARCHAR(100)                  | Full name of the author               |
+| `bio`            | TEXT                          | Short biography of the author         |
+
+#### Table: Genres
+
+| Column Name     | Data Type                      | Description                           |
+|------------------|-------------------------------|---------------------------------------|
+| `id`             | INT (Primary Key, Auto Increment) | Unique identifier for each genre      |
+| `name`           | VARCHAR(100)                  | Name of the genre                     |
+
+
 ## Database Design
 
 The database consists of three main tables:
